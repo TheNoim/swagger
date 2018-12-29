@@ -158,6 +158,9 @@ export const exploreModelDefinition = (type, definitions) => {
     const metadata =
       Reflect.getMetadata(DECORATORS.API_MODEL_PROPERTIES, prototype, key) ||
       {};
+    if (metadata.overrideType) {
+      return metadata.overrideType;
+    }
     const defaultTypes = [String, Boolean, Number, Object, Array];
 
     if (metadata.enum !== undefined) {

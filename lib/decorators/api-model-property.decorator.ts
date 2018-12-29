@@ -7,6 +7,7 @@ export const ApiModelProperty = (
     description?: string;
     required?: boolean;
     type?: any;
+    overrideType?: any;
     isArray?: boolean;
     collectionFormat?: string;
     default?: any;
@@ -43,6 +44,7 @@ export const ApiModelPropertyOptional = (
   metadata: {
     description?: string;
     type?: any;
+    overrideType?: any;
     isArray?: boolean;
     collectionFormat?: string;
     default?: any;
